@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "990884226201",
+    "project_id": "latihan-22312165",
+    "storage_bucket": "latihan-22312165.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:990884226201:android:d365065987e6b17768c408",
+        "android_client_info": {
+          "package_name": "com.example.myapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA0l9YXz9MJe6r49H-jJGGKCd5_rpJ_4Qc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:990884226201:android:1f078fe0d8bf697268c408",
+        "android_client_info": {
+          "package_name": "com.example.myapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA0l9YXz9MJe6r49H-jJGGKCd5_rpJ_4Qc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
