@@ -48,14 +48,21 @@ class LoginView extends GetView<LoginController> {
                   ),
                 ),
               ),
-              const SizedBox(height: 20),
+              const SizedBox(height: 10),
               ElevatedButton(
                 onPressed: () {
                   cAuth.login(controller.cEmail.text, controller.cPass.text);
                 },
                 child: const Text('Login'),
               ),
-              const SizedBox(height: 25),
+              const SizedBox(height: 10),
+              TextButton(
+                child: Text("Reset Password"),
+                onPressed: () {
+                  Get.offAllNamed(Routes.RESET_PASSWORD);
+                },
+              ),
+              const SizedBox(height: 20),
               Text("Don't have account yet?"),
               const SizedBox(height: 10),
               ElevatedButton(
@@ -65,12 +72,13 @@ class LoginView extends GetView<LoginController> {
                 child: const Text('Sign Up'),
               ),
               const SizedBox(height: 10),
-              TextButton(
-                child: Text("Reset Password"),
-                onPressed: () {
-                  Get.offAllNamed(Routes.RESET_PASSWORD);
-                },
+              Text("or"),
+              const SizedBox(height: 10),
+              ElevatedButton(
+                onPressed: () => cAuth.LoginGoogle(),
+                child: const Text('Login with Google'),
               ),
+              
             ],
           ),
         ),
