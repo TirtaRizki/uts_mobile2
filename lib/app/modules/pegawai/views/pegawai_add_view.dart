@@ -8,13 +8,21 @@ class PegawaiAddView extends GetView<PegawaiController> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Tambah Pegawai'),
+        title: const Text('Tambah Data Karyawan'),
         centerTitle: true,
       ),
       body: Padding(
         padding: EdgeInsets.all(8),
         child: Column(
           children: [
+            TextField(
+              controller: controller.cNomor,
+              textInputAction: TextInputAction.done,
+              decoration: InputDecoration(labelText: "Nomor Karyawan"),
+            ),
+            SizedBox(
+              height: 30,
+            ),
             TextField(
               controller: controller.cNama,
               autocorrect: false,
@@ -34,6 +42,7 @@ class PegawaiAddView extends GetView<PegawaiController> {
             ),
             ElevatedButton(
               onPressed: () => controller.add(
+                controller.cNomor.text,
                 controller.cNama.text,
                 controller.cJabatan.text,
               ),

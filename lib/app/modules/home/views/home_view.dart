@@ -44,7 +44,7 @@ class _DashboardAdminState extends State<DashboardAdmin> {
       'add': () => DosenAddView()
     },
     {
-      'title': 'Data Pegawai',
+      'title': 'Data Karyawan',
       'view': PegawaiView(),
       'add': () => PegawaiAddView()
     },
@@ -55,7 +55,7 @@ class _DashboardAdminState extends State<DashboardAdmin> {
     return Scaffold(
       drawer: drawer(),
       appBar: AppBar(
-        backgroundColor: const Color.fromARGB(255, 33, 113, 160),
+        backgroundColor: const Color.fromARGB(255, 54, 157, 216),
         titleSpacing: 0,
         title: Text(_fragment[_index]['title']),
         actions: [
@@ -149,7 +149,7 @@ class _DashboardAdminState extends State<DashboardAdmin> {
               Get.back();
             },
             leading: Icon(Icons.people),
-            title: Text('Data Pegawai'),
+            title: Text('Karyawan 22312165'),
             trailing: Icon(Icons.navigate_next),
             iconColor: const Color.fromARGB(255, 33, 113, 160),
             textColor: const Color.fromARGB(255, 33, 113, 160),

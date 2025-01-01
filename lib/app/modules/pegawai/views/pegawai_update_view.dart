@@ -9,7 +9,7 @@ class PegawaiUpdateView extends GetView<PegawaiController> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Ubah Pegawai'),
+        title: const Text('Ubah Data Karyawan'),
         centerTitle: true,
       ),
       body: FutureBuilder<DocumentSnapshot<Object?>>(
@@ -17,17 +17,26 @@ class PegawaiUpdateView extends GetView<PegawaiController> {
         builder: (context, snapshot) {
           if (snapshot.connectionState == ConnectionState.done) {
             var data = snapshot.data!.data() as Map<String, dynamic>;
-            controller.cNama.text = data['nama'];
-            controller.cJabatan.text = data['jabatan'];
+            controller.cNomor.text = data['no_karyawan'];
+            controller.cNama.text = data['nama_karyawan'];
+            controller.cJabatan.text = data['jabatan_karyawan'];
             return Padding(
               padding: EdgeInsets.all(8),
               child: Column(
                 children: [
                   TextField(
+                    controller: controller.cNomor,
+                    textInputAction: TextInputAction.done,
+                    decoration: InputDecoration(labelText: "Nomor Karyawan"),
+                  ),
+                  SizedBox(
+                    height: 30,
+                  ),
+                  TextField(
                     controller: controller.cNama,
                     autocorrect: false,
                     textInputAction: TextInputAction.next,
-                    decoration: InputDecoration(labelText: "Nama"),
+                    decoration: InputDecoration(labelText: "Nama Karyawan"),
                   ),
                   SizedBox(
                     height: 10,
@@ -35,13 +44,14 @@ class PegawaiUpdateView extends GetView<PegawaiController> {
                   TextField(
                     controller: controller.cJabatan,
                     textInputAction: TextInputAction.done,
-                    decoration: InputDecoration(labelText: "Jabatan"),
+                    decoration: InputDecoration(labelText: "Jabatan Karyawan"),
                   ),
                   SizedBox(
                     height: 30,
                   ),
                   ElevatedButton(
                     onPressed: () => controller.Update(
+                      controller.cNomor.text,
                       controller.cNama.text,
                       controller.cJabatan.text,
                       Get.arguments,
