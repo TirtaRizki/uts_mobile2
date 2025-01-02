@@ -11,26 +11,26 @@ class PegawaiController extends GetxController {
   FirebaseFirestore firestore = FirebaseFirestore.instance;
 
   Future<QuerySnapshot<Object?>> GetData() async {
-    CollectionReference karyawan_22312165 =
-        firestore.collection('karyawan_22312165');
+    CollectionReference karyawan_22312163 =
+        firestore.collection('karyawan_22312163');
 
-    return karyawan_22312165.get();
+    return karyawan_22312163.get();
   }
 
   Stream<QuerySnapshot<Object?>> StreamData() {
-    CollectionReference karyawan_22312165 =
-        firestore.collection('karyawan_22312165');
+    CollectionReference karyawan_22312163 =
+        firestore.collection('karyawan_22312163');
 
-    return karyawan_22312165.snapshots();
+    return karyawan_22312163.snapshots();
   }
 
   void add(
       String no_karyawan, String nama_karyawan, String jabatan_karyawan) async {
-    CollectionReference karyawan_22312165 =
-        firestore.collection("karyawan_22312165");
+    CollectionReference karyawan_22312163 =
+        firestore.collection("karyawan_22312163");
 
     try {
-      await karyawan_22312165.add({
+      await karyawan_22312163.add({
         "no_karyawan": no_karyawan,
         "nama_karyawan": nama_karyawan,
         "jabatan_karyawan": jabatan_karyawan,
@@ -59,7 +59,7 @@ class PegawaiController extends GetxController {
 
   Future<DocumentSnapshot<Object?>> GetDataById(String id) async {
     DocumentReference docRef =
-        firestore.collection("karyawan_22312165").doc(id);
+        firestore.collection("karyawan_22312163").doc(id);
 
     return docRef.get();
   }
@@ -67,7 +67,7 @@ class PegawaiController extends GetxController {
   void Update(String no_karyawan, String nama_karyawan, String jabatan_karyawan,
       String id) async {
     DocumentReference karyawanById =
-        firestore.collection("karyawan_22312165").doc(id);
+        firestore.collection("karyawan_22312163").doc(id);
 
     try {
       await karyawanById.update({
@@ -100,7 +100,7 @@ class PegawaiController extends GetxController {
 
   void delete(String id) {
     DocumentReference docRef =
-        firestore.collection("karyawan_22312165").doc(id);
+        firestore.collection("karyawan_22312163").doc(id);
 
     try {
       Get.defaultDialog(

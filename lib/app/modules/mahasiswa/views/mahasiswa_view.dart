@@ -53,9 +53,9 @@ class MahasiswaView extends GetView<MahasiswaController> {
                         backgroundColor: Color.fromARGB(255, 248, 248, 248),
                       ),
                       title: Text(
-                          "${(listAllDocs[index].data() as Map<String, dynamic>)["nama"]}"),
+                          "${(listAllDocs[index].data() as Map<String, dynamic>)["nama_matakuliah"]}"),
                       subtitle: Text(
-                          "${(listAllDocs[index].data() as Map<String, dynamic>)["npm"]}"),
+                          "${(listAllDocs[index].data() as Map<String, dynamic>)["kode_matakuliah"]}"),
                       trailing: IconButton(
                         onPressed: () => showOption(listAllDocs[index].id),
                         icon: Icon(Icons.more_vert),

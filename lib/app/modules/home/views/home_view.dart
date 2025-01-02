@@ -29,7 +29,7 @@ class _DashboardAdminState extends State<DashboardAdmin> {
   int _index = 0;
   List<Map> _fragment = [
     {
-      'title': 'Dashboard',
+      'title': 'Data Matakuliah',
       'view': MahasiswaView(),
       'add': () => MahasiswaAddView()
     },
@@ -38,11 +38,7 @@ class _DashboardAdminState extends State<DashboardAdmin> {
       'view': MahasiswaView(),
       'add': () => MahasiswaAddView()
     },
-    {
-      'title': 'Data Dosen',
-      'view': DosenView(),
-      'add': () => DosenAddView()
-    },
+    {'title': 'Data Dosen', 'view': DosenView(), 'add': () => DosenAddView()},
     {
       'title': 'Data Karyawan',
       'view': PegawaiView(),
@@ -75,7 +71,7 @@ class _DashboardAdminState extends State<DashboardAdmin> {
         children: [
           DrawerHeader(
             decoration: BoxDecoration(
-              color: const Color.fromARGB(255, 33, 113, 160),
+              color: const Color.fromARGB(255, 160, 33, 33),
             ),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.end,
@@ -91,7 +87,7 @@ class _DashboardAdminState extends State<DashboardAdmin> {
                   },
                 ),
                 Text(
-                  "Naswalya",
+                  "Tirta Rizki Ramadhan",
                   style: TextStyle(
                       fontSize: 18,
                       fontWeight: FontWeight.bold,
@@ -101,7 +97,7 @@ class _DashboardAdminState extends State<DashboardAdmin> {
                   height: 2,
                 ),
                 Text(
-                  'Admin',
+                  'Admin UTI',
                   style: TextStyle(
                     fontSize: 12,
                     color: Colors.white,
@@ -116,7 +112,7 @@ class _DashboardAdminState extends State<DashboardAdmin> {
               Get.back();
             },
             leading: Icon(Icons.dashboard),
-            title: Text('Dashboard'),
+            title: Text('Matakuliah 22312163'),
             trailing: Icon(Icons.navigate_next),
             iconColor: const Color.fromARGB(255, 33, 113, 160),
             textColor: const Color.fromARGB(255, 33, 113, 160),
@@ -149,7 +145,7 @@ class _DashboardAdminState extends State<DashboardAdmin> {
               Get.back();
             },
             leading: Icon(Icons.people),
-            title: Text('Karyawan 22312165'),
+            title: Text('Karyawan 22312163'),
             trailing: Icon(Icons.navigate_next),
             iconColor: const Color.fromARGB(255, 33, 113, 160),
             textColor: const Color.fromARGB(255, 33, 113, 160),
